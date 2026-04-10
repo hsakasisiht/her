@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday, My Dear 🎂✨</title>
+  <meta name="description" content="A special birthday surprise created with love, just for you. Happy Birthday!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Serif+Devanagari:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== FLOATING PARTICLES ========== -->
+  <div id="particles-container"></div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav id="navbar">
+    <div class="nav-logo">💖 For You</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#wishes">Wishes</a></li>
+      <li><a href="#messages">Letters</a></li>
+      <li><a href="#games">Games</a></li>
+      <li><a href="#gallery">Memories</a></li>
+      <li><a href="#secret">💌 Secret</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle">☰</button>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section id="home" class="hero-section">
+    <div class="hero-content">
+      <div class="hero-badge">🎉 Today is Extra Special 🎉</div>
+      <h1 class="hero-title">
+        <span class="title-line1">Happy Birthday</span>
+        <span class="title-name" id="heroName">Beautiful Soul ✨</span>
+      </h1>
+      <p class="hero-subtitle">On this magical day, the universe is celebrating you — just like I always do 🌟</p>
+      <div class="hero-buttons">
+        <a href="#wishes" class="btn btn-primary">See Your Wishes 🎊</a>
+        <a href="#secret" class="btn btn-outline">💌 Open My Letter</a>
+      </div>
+      <div class="hero-countdown">
+        <div class="countdown-label">You're amazing since we talk first</div>
+        <div class="countdown-timer" id="ageTimer">Loading...</div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="cake-container">
+        <div class="cake-wrapper">
+          <div class="cake-emoji-big">🎂</div>
+          <div class="candle-flames">
+            <span>🕯️</span><span>🕯️</span><span>🕯️</span>
+          </div>
+        </div>
+        <div class="orbit-ring">
+          <div class="orbit-item" style="--i:0">🌸</div>
+          <div class="orbit-item" style="--i:1">⭐</div>
+          <div class="orbit-item" style="--i:2">💖</div>
+          <div class="orbit-item" style="--i:3">🌟</div>
+          <div class="orbit-item" style="--i:4">🎀</div>
+          <div class="orbit-item" style="--i:5">✨</div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll to explore</span>
+      <div class="scroll-arrow">↓</div>
+    </div>
+  </section>
+
+  <!-- ========== BIRTHDAY WISHES SECTION ========== -->
+  <section id="wishes" class="wishes-section">
+    <div class="section-header">
+      <h2 class="section-title">🎊 Birthday Wishes 🎊</h2>
+      <p class="section-subtitle">Every word written here comes straight from the heart</p>
+    </div>
+    <div class="wishes-grid">
+      <div class="wish-card" data-delay="0">
+        <div class="wish-icon">🌸</div>
+        <h3>Bloom Like a Flower</h3>
+        <p>May this year bring you the most beautiful bloom of your life — may every petal of your dreams unfold with grace and joy.</p>
+      </div>
+      <div class="wish-card" data-delay="1">
+        <div class="wish-icon">⭐</div>
+        <h3>Shine Like a Star</h3>
+        <p>You already outshine every star in the sky. But today, may all that brilliance reflect back at you tenfold.</p>
+      </div>
+      <div class="wish-card" data-delay="2">
+        <div class="wish-icon">💫</div>
+        <h3>Dream Without Limits</h3>
+        <p>On your special day, I wish you the freedom to dream wildly — and the strength to chase each and every one of them.</p>
+      </div>
+      <div class="wish-card" data-delay="3">
+        <div class="wish-icon">🌙</div>
+        <h3>Peace Every Night</h3>
+        <p>May every night bring you the sweetest sleep and every morning greet you with endless possibilities and fresh hope.</p>
+      </div>
+      <div class="wish-card" data-delay="4">
+        <div class="wish-icon">🎀</div>
+        <h3>Happiness Always</h3>
+        <p>You deserve happiness that's louder than your laughter and deeper than the ocean. May it be yours, always and forever.</p>
+      </div>
+      <div class="wish-card" data-delay="5">
+        <div class="wish-icon">💖</div>
+        <h3>Loved Unconditionally</h3>
+        <p>Know that you are loved — sincerely, truly, and completely — not just on this day, but every single day of the year.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== LOVE LETTER SECTION ========== -->
+  <section id="messages" class="messages-section">
+    <div class="section-header">
+      <h2 class="section-title">💌 Letters For You</h2>
+      <p class="section-subtitle">Words I keep in my heart, finally finding their way to you</p>
+    </div>
+    <div class="letters-container">
+      <div class="letter-tabs">
+        <button class="tab-btn active" data-tab="letter1">Main 💖</button>
+        <button class="tab-btn" data-tab="letter2">Goods ✨</button>
+        <button class="tab-btn" data-tab="letter3">Bads 😈</button>
+      </div>
+      <div class="letter-content" id="letter1" style="display:block">
+        <div class="letter-paper">
+          <div class="letter-header">Dear My Main,</div>
+          <div class="letter-body">
+            <p>Happy Birthday Bachiiii 🎂</p>
+            <p>Wish you many many many many returns of the day — may God bless youhhhh. Tum hamesha khush or mast raho, dukh dard se bilkul door. You'll get all that you want, all of your success you'll achieve... 🌟</p>
+            <p>And thankewwww so muchhh for entering in my life. For asking that one question to me on 23 Feb — litrally it was the best day I felt. When first time you talked to me... litrally my happiness was on the peakkkk.</p>
+            <p>I can still imagine that day. After how long time I smiled like that — litrally many people asked me, <em>"kya baat hai, itna kyun muskura rahe ho?"</em> — You gave me a reason to smile. 😊</p>
+            <p>Usi dinn phirse jab hum log canteen pe mile, itni saari baateinnn — us time kaafi thi mere liye. Us dinn jaate waqt maine pehli baar tumhe hand sign se tata kiya tha... ✋</p>
+            <p>After that, jab main wahan bench pe tha, tum saamne waali bench pe thi — aur main wahan aaya, aur hamaari pehli baar khud se baat hui. Litrally, again my happiness++... 📈💖</p>
+            <p>Phir us dinn same wahi bench pe baitha — and you invited me. Tumhare saath us ghaas mein baithna... tumse baatein karna, tumne mujhe apni gallery dikhaayi... aur bhot himmat laake maine tumse tumhari Insta id maangi thi. 😅</p>
+            <p>Aur phir jab raat mein tumse meri baat hui — <strong>and you won my hearttt...</strong> I fall for youhhhhhhhhh. 💘</p>
+            <p>Litrally, I can only say this —</p>
+            <div style="text-align:center; font-size:1.1rem; line-height:2; color:#8b1a3a; font-style:italic; margin: 1.2rem 0; padding: 1rem; border-left: 3px solid #c9184a;">
+              " तुम देवी मेरे प्रेम मंदिर की,<br/>
+              मैं प्रेमभक्त सा तुम्हारा दास प्रिये। "
+            </div>
+          </div>
+          <div class="letter-sign">Tumhara, hamesha ke liye, <br/><em>Woh jo tujhse dil haar baitha</em> 💖</div>
+        </div>
+      </div>
+      <div class="letter-content" id="letter2" style="display:none">
+        <div class="letter-paper">
+          <div class="letter-header">To The One Who Shines,</div>
+          <div class="letter-body">
+            <p>Tumhari agar karun main tareef, to jitni karun utni kamm... 🌸</p>
+            <p>Ha tumhe lagta hai ki kuch ni kara — kuch ni kara. Lekin na jaane isme bhi tumne kya kya karr dala. Agar tum kuch karr deti, to kya kya ho jaata...</p>
+            <p>Tumne mujhe us gehraai tak samjha, jahan tak koi ni samajh paya. Meri aadton se judi, aur unhe bhi badlna — <em>meri pyaari doosri maata ji</em> banke jo pitai lagaayi aur samjhaya hai. 😄💖</p>
+            <p>Mere saath raat raat bhar baatein kari... mere daily gaane sunke meri singing mein help ki... jo Haryanvi songs ko main miss kar de rha tha, main untak bhi pahuncha aur unhe suna. <strong>Tumne bhot kuch badla hai meri andheri zindagi mein.</strong> ✨</p>
+            <p>Ek chaar deewaari mein rehne waale ladke ko yeh duniya dikhai — aur ab tum hi meri duniya ban gayi. You are helping me to live the actual life. 🌍</p>
+            <p>Tumhare saath bitaye pal... woh dinn Campus 1 — pura dinn guzaar dena — hayyeee. Tumne tab pehli baar mujhe maara tha. 😂 I can remember jab tumne mera haath pakdke mujhe kheeencha tha... woh dinn bhi kya dinn tha. 🤝</p>
+            <p>Tumne mujhe woh feel karwaya jo aaj tak ni karwa saka koi. Tum meri zindagi mein khushiyan laai ho. Tumne mujhe zindagi jeene ka lalach diya hai — aur main ab bhot lalchi bann gaya hun. 😅</p>
+            <p>Main soch bhi ni sakta main kis condition mein tha... <strong>tumne sab badal diya hai.</strong> I can give you each and every reason to live and love... 💘</p>
+            <p style="text-align:center; font-weight:700; font-size:1.1rem; color:#8b1a3a; margin-top:0.5rem;">You're my life. My Main. 🌟</p>
+            <div style="text-align:center; font-size:1.05rem; line-height:2.2; color:#8b1a3a; font-style:italic; margin: 1.5rem 0; padding: 1.2rem 1rem; border-left: 3px solid #c9184a; border-right: 3px solid #c9184a;">
+              तुम लक्ष्मी धनतेरस की,<br/>
+              मैं फटा पुराना नोट प्रिये।<br/>
+              तुम राधा मेरे वृंदावन की,<br/>
+              मैं बनूँ कृष्ण तुम्हारे प्रेम का।
+            </div>
+          </div>
+          <div class="letter-sign">Tumhara jo tumse badal gaya, <br/><em>Woh lalchi banda</em> 😄💖</div>
+        </div>
+      </div>
+      <div class="letter-content" id="letter3" style="display:none">
+        <div class="letter-paper">
+          <div class="letter-header">Acha... Toh Suno 😏</div>
+          <div class="letter-body">
+            <p>Tumhare favourite 2 words hain na —</p>
+            <div style="text-align:center; margin: 1.2rem 0; padding: 1.2rem; background: linear-gradient(135deg, #ffe0ec, #f5d6ff); border-radius: 12px; border: 2px dashed #c9184a;">
+              <span style="font-family: 'Dancing Script', cursive; font-size: 2.8rem; color: #c9184a; font-weight: 700;">" Kuch Nahi "</span>
+            </div>
+            <p>Koi gift laao — <em>"Kuch nahi chahiye." 🎁</em></p>
+            <p>Koi effort karo — <em>"Kuch nahi karna tha itna." 🙅‍♀️</em></p>
+            <p>Koi puchhe kaisa feel hora — <em>"Kuch nahi." 😶</em></p>
+            <p>Birthday pe kya chahiye — <em>"Kuch nahi." 🎂</em></p>
+            <p>Tum kaisi ho — <em>"Kuch nahi, theek hun." 🙃</em></p>
+            <p>Par suniye... yahi "Kuch Nahi" kehne waali ladki ne meri poori zindagi badal di. Sochne wali baat hai na? 😄</p>
+            <p>Toh is baar <strong>kuch nahi mat kehna</strong> — bas khush raho, celebrate karo, aur feel karo ki tum kitni special ho. 💖</p>
+            <p>Kyunki chahe tum kuch bhi kaho — mujhe pata hai tumhare dil mein <em>bahut kuch</em> hai. Aur woh bahut kuch hi toh mujhe tumse baandhta hai. 🌸</p>
+          </div>
+          <div class="letter-sign">Tumhara woh banda, <br/><em>jise tum "Kuch nahi" kehke bhi sambhal leti ho</em> 😂💖</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GAMES SECTION ========== -->
+  <section id="games" class="games-section">
+    <div class="section-header">
+      <h2 class="section-title">🎮 Birthday Games</h2>
+      <p class="section-subtitle">Play your way through these fun little adventures made just for you!</p>
+    </div>
+
+    <div class="games-tabs">
+      <button class="game-tab active" data-game="quiz">🤔 Birthday Quiz</button>
+      <button class="game-tab" data-game="memory">💭 Memory Match</button>
+      <button class="game-tab" data-game="wish">⭐ Make a Wish</button>
+      <button class="game-tab" data-game="stars">⭐ Star Catcher</button>
+    </div>
+
+    <!-- QUIZ GAME -->
+    <div class="game-panel" id="game-quiz">
+      <div class="quiz-container">
+        <div class="quiz-header">
+          <h3>🤔 How Well Do I Know You?</h3>
+          <div class="quiz-score">Score: <span id="quizScore">0</span> / <span id="quizTotal">5</span></div>
+        </div>
+        <div class="quiz-progress">
+          <div class="quiz-progress-bar" id="quizProgressBar" style="width:0%"></div>
+        </div>
+        <div id="quizContent">
+          <div class="quiz-question" id="quizQuestion">Ready to start?</div>
+          <div class="quiz-options" id="quizOptions"></div>
+          <button class="btn btn-primary" id="startQuizBtn" onclick="startQuiz()">Start Quiz 🎯</button>
+        </div>
+        <div id="quizResult" class="quiz-result" style="display:none"></div>
+      </div>
+    </div>
+
+    <!-- MEMORY GAME -->
+    <div class="game-panel" id="game-memory" style="display:none">
+      <div class="memory-container">
+        <div class="memory-header">
+          <h3>💭 Memory Match Game</h3>
+          <div class="memory-stats">
+            <span>Moves: <strong id="memMoves">0</strong></span>
+            <span>Pairs: <strong id="memPairs">0</strong>/8</span>
+            <button class="btn btn-sm" onclick="initMemory()">🔄 Reset</button>
+          </div>
+        </div>
+        <div class="memory-grid" id="memoryGrid"></div>
+      </div>
+    </div>
+
+    <!-- WISH GAME -->
+    <div class="game-panel" id="game-wish" style="display:none">
+      <div class="wish-game-container">
+        <h3>⭐ Make a Birthday Wish</h3>
+        <p class="wish-instructions">Click the shooting star to make your wish come true!</p>
+        <div class="wish-sky" id="wishSky">
+          <div class="star-field"></div>
+          <div class="shooting-star" id="shootingStar" onclick="makeWish()">💫</div>
+          <div class="wish-message" id="wishMessage"></div>
+        </div>
+        <div class="wish-list">
+          <h4>✨ Mere Dil Se Tumhare Liye:</h4>
+          <div class="wish-items">
+            <div class="wish-item granted">🎂 Happy Birthday Bachuu.... 🎉</div>
+            <div class="wish-item granted">🤲 May God Always Bless You</div>
+            <div class="wish-item granted">😊 Hamesha Khush Raho <em>(Warna Me To Hun hi)</em> 💪</div>
+            <div class="wish-item granted">🌟 Tumhari Life Hamesha Enjoyable Rahe <em>(I will try my best to make it more enjoyable)</em> 💖</div>
+            <div class="wish-item pulse">🌍 Ghumo, Explore Karo, Ye Duniya Ki Fikr Chhodo <em>(sb jee lege)</em> ✈️</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAR CATCHER GAME -->
+    <div class="game-panel" id="game-stars" style="display:none">
+      <div class="star-catcher-container">
+        <div class="sc-header">
+          <h3>⭐ Star Catcher!</h3>
+          <div class="sc-stats">
+            <span class="sc-stat">⭐ <strong id="scScore">0</strong></span>
+            <span class="sc-stat sc-timer-box">⏱️ <strong id="scTimer">30</strong>s</span>
+          </div>
+        </div>
+        <p class="sc-instructions">Stars gir rahe hain — jaldi pakad unhe! Har star mein ek sweet message hai 💫</p>
+        <div class="sc-arena" id="scArena">
+          <div class="sc-idle" id="scIdle">
+            <div class="sc-idle-emoji">⭐</div>
+            <p>Toh phir kya soch rahi hai?</p>
+            <button class="btn btn-primary" onclick="startStarCatcher()">Start Karo! 🚀</button>
+          </div>
+          <div class="sc-message-popup" id="scMsgPopup"></div>
+        </div>
+        <div class="sc-result" id="scResult" style="display:none">
+          <div class="sc-result-emoji" id="scResultEmoji"></div>
+          <div class="sc-result-text" id="scResultText"></div>
+          <button class="btn btn-primary" onclick="resetStarCatcher()" style="margin-top:1rem">Phir Khelna Hai! 🔄</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ========== WORD PUZZLE SECTION ========== -->
+  <section id="wordpuzzle" class="wordpuzzle-section">
+    <div class="section-header">
+      <h2 class="section-title">🔤 Complete The Words</h2>
+      <p class="section-subtitle">Fill in the missing letter in each word... it's always the same one 😉</p>
+    </div>
+    <div class="puzzle-container">
+
+      <div class="puzzle-lines" id="puzzleLines">
+
+        <div class="puzzle-line">
+          <span class="pz-text">How can I </span>
+          <span class="pz-word">"LA<input class="pz-input" maxlength="1" data-ans="U" placeholder="_" />GH"</span>
+          <span class="pz-text pz-hidden"> without "U"</span>
+        </div>
+
+        <div class="puzzle-line">
+          <span class="pz-text">How can I </span>
+          <span class="pz-word">"TR<input class="pz-input" maxlength="1" data-ans="U" placeholder="_" />ST"</span>
+          <span class="pz-text pz-hidden"> without "U"</span>
+        </div>
+
+        <div class="puzzle-line">
+          <span class="pz-text">How can I </span>
+          <span class="pz-word">"H<input class="pz-input" maxlength="1" data-ans="U" placeholder="_" />G"</span>
+          <span class="pz-text pz-hidden"> without "U"</span>
+        </div>
+
+        <div class="puzzle-line">
+          <span class="pz-text">How can I have </span>
+          <span class="pz-word">"F<input class="pz-input" maxlength="1" data-ans="U" placeholder="_" />N"</span>
+          <span class="pz-text pz-hidden"> without "U"</span>
+        </div>
+
+        <div class="puzzle-line">
+          <span class="pz-text">How can I have a </span>
+          <span class="pz-word">"F<input class="pz-input" maxlength="1" data-ans="U" placeholder="_" />TURE"</span>
+          <span class="pz-text pz-hidden"> without "U"</span>
+        </div>
+
+        <div class="puzzle-line">
+          <span class="pz-text">My </span>
+          <span class="pz-word">"SO<input class="pz-input" maxlength="1" data-ans="U" placeholder="_" />L"</span>
+          <span class="pz-text pz-hidden"> is incomplete without "U"</span>
+        </div>
+
+      </div>
+
+      <div class="puzzle-hint" id="puzzleHint" style="display:none">
+        💡 Hint: It's the letter that comes after "T" and before "V"... 😉
+      </div>
+
+      <button class="btn btn-golden puzzle-submit-btn" id="puzzleSubmitBtn" onclick="submitPuzzle()">
+        ✨ Reveal the Answer
+      </button>
+
+      <!-- REVEALED STATE -->
+      <div class="puzzle-reveal" id="puzzleReveal" style="display:none">
+        <div class="reveal-lines">
+          <div class="reveal-line" style="--ri:0">How can I <span class="reveal-word">"LAUGH"</span> without <span class="reveal-u">"U"</span></div>
+          <div class="reveal-line" style="--ri:1">How can I <span class="reveal-word">"TRUST"</span> without <span class="reveal-u">"U"</span></div>
+          <div class="reveal-line" style="--ri:2">How can I <span class="reveal-word">"HUG"</span> without <span class="reveal-u">"U"</span></div>
+          <div class="reveal-line" style="--ri:3">How can I have <span class="reveal-word">"FUN"</span> without <span class="reveal-u">"U"</span></div>
+          <div class="reveal-line" style="--ri:4">How can I have a <span class="reveal-word">"FUTURE"</span> without <span class="reveal-u">"U"</span></div>
+          <div class="reveal-line" style="--ri:5">My <span class="reveal-word">"SOUL"</span> is incomplete without <span class="reveal-u">"U"</span></div>
+        </div>
+        <div class="reveal-final">
+          <div class="reveal-final-icon">💖</div>
+          <p>Har us cheez mein jo mujhe pyaari hai...</p>
+          <p><strong>Tum ho.</strong></p>
+          <p class="reveal-tagline">And that's not just a word game. That's the truth. 🌟</p>
+        </div>
+        <button class="btn btn-outline" onclick="resetPuzzle()" style="margin-top:1.5rem">🔄 Play Again</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== SECRET SECTION ========== -->
+  <section id="secret" class="secret-section">
+    <div class="secret-container">
+      <div class="secret-lock" id="secretLock">
+        <div class="lock-icon">🔒</div>
+        <h2>There's a secret waiting for you...</h2>
+        <p>Are you ready to open it?</p>
+        <button class="btn btn-golden" onclick="unlockSecret()">Open with Love 💖</button>
+      </div>
+      <div class="secret-content" id="secretContent" style="display:none">
+        <div class="confession-card">
+          <div class="confession-emoji">💌</div>
+          <h2 class="confession-title">Hey My Main...</h2>
+          <div class="confession-text">
+            <p>I'm grateful to having you in my life. You filled it with colors — it was so dark before. Main apna past yaad karta hun aur apna current dekhta hun... aur bas tumhara shukriya ada karna chahta hun. 🌈</p>
+            <p>Mera gussa na jaane kahan chala gaya — <strong>tumne mujhe calm kar diya.</strong> Ek mahine se bhi kum time mein tumne itna kuch kar diya... litrally I'm glad that I have you. Thankksss youhhhhhhhhh sooo muchhh for all. 🤍</p>
+            <p>Main jo bikhra hua sa tha — sukhe patton ki tarah — <em>tumne mujhe samet ke jo mujhme jaan di hai</em>... hayyeee... main hamesha tumhari abhaari rahunga. 🍂✨</p>
+            <p>Main chahta hun tum hamesha muskurao. Tumhari life khushiyon se bhari rahe. Tumhe woh sab mile jo tum chahti ho. Bas please — <strong>yeh dukhi mat hua karo.</strong> Zyada overthinking nahi karni chahiye. 🥺</p>
+            <p>Main hamesha tumhare saath hun. <strong>Main hamesha sirf tumhara hun.</strong> Agar tumhara na bhi ho saka — to bhi main tumhari parchhai se ishq-ibadat karunga. Tum meri zindagi ban chuki ho. Tumne meri soch se parey cheezein ki. <em>Tum bahot khaas ho, priye.</em> 💘</p>
+            <div class="confession-highlight">
+              Tum na bhi milo, tab bhi mujhe naaz hoga khud pe —<br/>
+              ki main tumse mila tha.<br/>
+              <em>"Ye lamhe mere liye hamesha haseen rahenge..."</em> 🌟
+            </div>
+            <div class="confession-highlight" style="font-family:'Noto Serif Devanagari',serif; font-size:1.3rem; line-height:2.6; letter-spacing:0.8px; font-weight:600;">
+              तुम हीरे की हार प्रिये,<br/>
+              मैं तांबे के बर्तन सही।<br/>
+              तुम चमको चाँद से भी ज़्यादा,<br/>
+              मैं बनूँ तुम्हारा राज़ प्रिये।
+            </div>
+            <p style="text-align:center; font-size:1rem; color:#8b1a3a;">Bhot bhot shukriya aapka, Madam jiiiii 🙏<br/>Lot's of love for youhhh — <strong>Bachuu</strong> 💖</p>
+          </div>
+          <div class="reaction-section">
+            <p>How does this make you feel? 😊</p>
+            <div class="reaction-buttons">
+              <button class="reaction-btn" onclick="react('😊')">😊 Happy</button>
+              <button class="reaction-btn" onclick="react('🥺')">🥺 Touched</button>
+              <button class="reaction-btn" onclick="react('😍')">😍 Love it</button>
+              <button class="reaction-btn" onclick="react('🤗')">🤗 Aww</button>
+              <button class="reaction-btn" onclick="react('💖')">💖 I feel it too</button>
+            </div>
+            <div class="reaction-response" id="reactionResponse"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BIRTHDAY BALLOON POPPER ========== -->
+  <section class="balloon-section">
+    <div class="section-header">
+      <h2 class="section-title">🎈 Pop All The Balloons!</h2>
+      <p class="section-subtitle">Click every balloon to release birthday surprises!</p>
+    </div>
+    <div class="balloon-container" id="balloonContainer"></div>
+    <div class="balloon-score">Popped: <span id="balloonCount">0</span> 🎈</div>
+  </section>
+
+  <!-- ========== COUNTDOWN / FINAL MESSAGE ========== -->
+  <section class="final-section">
+    <div class="final-content">
+      <div class="final-stars">✨ ⭐ 🌟 ✨ ⭐</div>
+      <h2 class="final-title">May Your Day Be as Magical as You Are</h2>
+      <p class="final-text">
+        This little website is a tiny piece of the enormous amount of happiness I wish for you.
+        From the bottom of my heart — Happy Birthday! 🎂
+      </p>
+      <div class="final-cake">🎂</div>
+      <div class="birthday-wishes-ticker">
+        <div class="ticker-content">
+          🎉 Happy Birthday! 🎊 &nbsp;·&nbsp; 🌸 You're Amazing! 💫 &nbsp;·&nbsp;
+          ⭐ Make a Wish! 🌙 &nbsp;·&nbsp; 💖 You're So Loved! 🎀 &nbsp;·&nbsp;
+          🎈 Celebrate Big! 🎊 &nbsp;·&nbsp; 🌟 This Is Your Day! 🎉
+        </div>
+      </div>
+      <button class="btn btn-golden big-btn" onclick="launchConfetti()">🎊 Launch Confetti Celebration!</button>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="footer-hearts">💖 💕 💗 💓 💞</div>
+    <p>Made with enormous love, just for you 🌸</p>
+    <p class="footer-small">Happy Birthday — may every day forward be as beautiful as you deserve 🎂✨</p>
+  </footer>
+
+  <!-- ========== CONFETTI CANVAS ========== -->
+  <canvas id="confettiCanvas" style="position:fixed;top:0;left:0;pointer-events:none;z-index:9999;width:100%;height:100%"></canvas>
+
+  <!-- ========== MUSIC PLAYER ========== -->
+  <div class="music-player" id="musicPlayer">
+    <button class="music-btn" id="musicToggle" onclick="toggleMusic()" title="Toggle birthday music">
+      🎵
+    </button>
+    <span class="music-label">Birthday Vibes</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
