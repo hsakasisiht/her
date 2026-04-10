@@ -1613,6 +1613,7 @@ section {
   .orbit-item:nth-child(1) { transform: rotate(0deg) translateY(-110px); }
   .orbit-item:nth-child(3) { transform: rotate(120deg) translateY(-110px); }
   .orbit-item:nth-child(5) { transform: rotate(240deg) translateY(-110px); }
+  .music-label { display: none; }
 }
 
 /* ---- MOBILE NAV ---- */
